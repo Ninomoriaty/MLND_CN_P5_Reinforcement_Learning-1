@@ -50,11 +50,17 @@ class Robot(object):
         else:
             # TODO 2. Update parameters when learning
             self.t += 1
-            # self.epsilon = self.epsilon ** self.t
-            if self.epsilon < 0.01:
-                self.epsilon = 0.01
+
+            # # 指数衰减
+            # self.epsilon = self.epsilon0 ** self.t
+            
+            # 线性衰减
+            if self.epsilon < 0.1:
+                self.epsilon /= 2
             else:
-                self.epsilon -= self.t * 0.1
+                self.epsilon = self.epsilon0 - (self.t-1) * 0.1
+
+            
 
         return self.epsilon
 
@@ -74,11 +80,13 @@ class Robot(object):
         # Qtable[state] ={'u':xx, 'd':xx, ...}
         # If Qtable[state] already exits, then do
         # not change it.
-        if state in self.Qtable:
-            pass
-        else:
-            self.Qtable[state] = {'u':0.0, 'r':0.0, 'd':0.0, 'l':0.0}  # 否则，新增一个状态，并赋值为0，注意是float
+        # if state in self.Qtable:
+        #     pass
+        # else:
+        #     self.Qtable[state] = {'u':0.0, 'r':0.0, 'd':0.0, 'l':0.0}  # 否则，新增一个状态，并赋值为0，注意是float
 
+        self.Qtable.setdefault(state, {a:0.0 for a in self.valid_actions})
+        
     def choose_action(self):
         """
         Return an action according to given rules
