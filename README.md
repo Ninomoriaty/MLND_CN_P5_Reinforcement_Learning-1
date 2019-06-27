@@ -4,7 +4,7 @@
 ## 1. 问题描述
 
 
-![](https://img-blog.csdnimg.cn/2019062721473076.png#pic_center =160x)
+![](https://img-blog.csdnimg.cn/2019062721473076.png#pic_center)
 
 在该项目中，你将使用强化学习算法，实现一个自动走迷宫机器人。
 
@@ -85,7 +85,7 @@ $$
 
 
 ---
-![ALT](https://img-blog.csdnimg.cn/20190627214934358.png#pic_center =160x)
+![](https://img-blog.csdnimg.cn/20190627214934358.png)
 
 **问题 2**：根据已知条件求 $q(s_{t},a)$，在如下模板代码中的空格填入对应的数字即可。
 
@@ -190,7 +190,7 @@ from Maze import Maze
 first_maze = Maze(from_file='test_world/maze_01.txt')
 first_maze
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627215424430.png#pic_center =320x)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627215424430.png)
 
 
 
@@ -251,7 +251,7 @@ first_maze
     机器人最后的位置: (1, 11)
     
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627215445520.png#pic_center =320x)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627215445520.png)
 
 
 
@@ -291,7 +291,7 @@ first_maze
     
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627215458495.png#pic_center =320x)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627215458495.png)
 
 
 
